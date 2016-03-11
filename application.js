@@ -9,7 +9,7 @@ var express = require('express')
 // Add our request counting middleware before all other routes
 app.use(counters.middleware);
 
-console.log('dev');
+console.log('devel');
 
 // Note: the order which we add middleware to Express here is important!
 app.use('/sys', mbaasExpress.sys([]));
