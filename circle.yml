@@ -1,0 +1,9 @@
+machine:
+  environment:
+    FH_GIT_URL: git@git.us.feedhenry.com:ps-consult-na/Cont-Continuous-Integration-and-Deployment-Cloud.git
+
+deployment:
+  development:
+    branch: development
+    commands:
+      - git push $FH_GIT_URL $CIRCLE_SHA1:development
