@@ -1,0 +1,49 @@
+{
+  "name": "rhmap-express-template",
+  "version": "0.1.0",
+  "description": "A Red Hat Mobile Cloud Application template that uses express.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "env NODE_PATH=. node application.js",
+    "jshint": "jshint lib/**/*.js",
+    "test": "npm run-script jshint && npm run-script coverage && npm run-script check-coverage",
+    "coverage": "env NODE_PATH=. NODE_ENV=test istanbul cover -x *.test.js _mocha $(find ./lib -name \"*.test.js\")",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "unit": "env NODE_PATH=. NODE_ENV=test _mocha $(find ./lib -name \"*.test.js\")"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanshortiss/rhmap-express-template.git"
+  },
+  "keywords": [
+    "express",
+    "test",
+    "testing",
+    "example",
+    "rhmap",
+    "fh"
+  ],
+  "author": "Evan Shortiss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evanshortiss/rhmap-express-template/issues"
+  },
+  "homepage": "https://github.com/evanshortiss/rhmap-express-template",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "fh-mbaas-api": "^5.5.6",
+    "lodash": "^4.6.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "express": "^4.13.4",
+    "istanbul": "^0.4.2",
+    "jshint": "^2.9.1",
+    "mocha": "^2.4.5",
+    "node-mocks-http": "^1.5.1",
+    "proxyquire": "^1.7.4",
+    "sinon": "^1.17.3",
+    "supertest": "^0.9.2"
+  }
+}
